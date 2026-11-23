@@ -1,5 +1,8 @@
-import { Link, NavLink } from 'react-router-dom'
-import logoa from '../assets/kirolgune-logoa.png'
+'use client'
+
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const estekak = [
   { bidea: '/', testua: 'Hasiera' },
@@ -9,13 +12,15 @@ const estekak = [
   { bidea: '/kontaktua', testua: 'Kontaktua' },
 ]
 
-function Goiburua() {
+export default function Goiburua() {
+  const unekoa = usePathname()
+
   return (
     <header className="goiburua sticky-top">
       <nav className="navbar navbar-expand-lg py-2">
         <div className="container">
-          <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
-            <img src={logoa} alt="" height="38" />
+          <Link className="navbar-brand d-flex align-items-center gap-2" href="/">
+            <Image src="/kirolgune-logoa.png" alt="" width={28} height={38} priority />
             KirolGune
           </Link>
 
@@ -35,18 +40,21 @@ function Goiburua() {
             <ul className="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-2">
               {estekak.map(({ bidea, testua }) => (
                 <li className="nav-item" key={bidea}>
-                  <NavLink className="nav-link px-lg-2" to={bidea} end={bidea === '/'}>
+                  <Link
+                    className={`nav-link px-lg-2 ${unekoa === bidea ? 'active' : ''}`}
+                    href={bidea}
+                  >
                     {testua}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>
 
             <div className="d-flex gap-2">
-              <Link className="btn btn-outline-primary" to="/saioa-hasi">
+              <Link className="btn btn-outline-primary" href="/saioa-hasi">
                 Saioa hasi
               </Link>
-              <Link className="btn btn-primary" to="/erregistratu">
+              <Link className="btn btn-primary" href="/erregistratu">
                 Erregistratu
               </Link>
             </div>
@@ -56,5 +64,3 @@ function Goiburua() {
     </header>
   )
 }
-
-export default Goiburua
