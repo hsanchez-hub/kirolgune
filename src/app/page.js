@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const Ikonoa = ({ d }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -25,7 +25,7 @@ const zerbitzuak = [
   },
 ]
 
-function Hasiera() {
+export default function Hasiera() {
   return (
     <>
       <section className="azala py-5">
@@ -40,10 +40,10 @@ function Hasiera() {
                 orduz, mugikorretik edo ordenagailutik.
               </p>
               <div className="d-flex flex-wrap gap-2">
-                <Link className="btn btn-light btn-lg" to="/erreserbak">
+                <Link className="btn btn-light btn-lg" href="/erreserbak">
                   Erreserbatu orain
                 </Link>
-                <Link className="btn btn-outline-light btn-lg" to="/jarduerak">
+                <Link className="btn btn-outline-light btn-lg" href="/jarduerak">
                   Jarduerak ikusi
                 </Link>
               </div>
@@ -74,4 +74,3 @@ function Hasiera() {
   )
 }
 
-export default Hasiera

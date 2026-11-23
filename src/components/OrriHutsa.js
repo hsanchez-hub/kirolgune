@@ -1,4 +1,4 @@
-function OrriHutsa({ izenburua }) {
+export default function OrriHutsa({ izenburua }) {
   return (
     <section className="container py-5">
       <h1 className="h2 fw-bold">{izenburua}</h1>
@@ -6,5 +6,3 @@ function OrriHutsa({ izenburua }) {
     </section>
   )
 }
-
-export default OrriHutsa
