@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './globals.css'
 import Goiburua from '@/components/Goiburua'
+import Footer from '@/components/Footerra'
 import BootstrapJS from '@/components/BootstrapJS'
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <Goiburua />
         <main>{children}</main>
         <BootstrapJS />
+         <Footer />
       </body>
     </html>
   )
