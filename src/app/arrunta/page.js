@@ -5,5 +5,5 @@ export const metadata = { title: 'Arrunta · KirolGune' }
 
 
 export default function Arrunta() {
-  return <OrriHutsa izenburua="arrunta" />
+  return <OrriHutsa izenburua="Arrunta" />
 }
