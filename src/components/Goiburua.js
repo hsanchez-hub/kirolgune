@@ -18,7 +18,7 @@ export default function Goiburua() {
   return (
     <header className="goiburua sticky-top">
       <nav className="navbar navbar-expand-lg py-2">
-        <div className="container">
+        <div className="container-fluid">
           <Link className="navbar-brand d-flex align-items-center gap-2" href="/">
             <Image src="/kirolgune-logoa.png" alt="" width={28} height={38} priority />
             KirolGune
