@@ -17,7 +17,7 @@ export default function Goiburua() {
 
   return (
     
-    <aside className="alboa d-flex flex-column p-3 vh-100 sticky-top" style={{ width: 220 }}>
+    <aside className="alboa d-flex flex-column p-3  sticky-top" style={{ width: 220 }}>
       <ul className="nav nav-pills flex-column gap-1 mb-auto">
         {estekak.map(({ bidea, testua }) => (
           <li className="nav-item" key={bidea}>

@@ -93,12 +93,8 @@ body {
 .alboa {
   background: var(--kg-berde-iluna);
   color: #fff;
-  position: sticky;
-  top: 66px;
-  height: fit-content;
-  align-self: flex-start;
-  border-radius: 0 0 1rem 0;
-  z-index: 1000; /* menor que el del header (1020) */
+  height: calc(90vh - 60px); 
+  z-index: 1000; 
 }
 
 .alboa .navbar-brand {
