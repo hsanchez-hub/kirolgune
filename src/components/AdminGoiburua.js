@@ -9,7 +9,7 @@ const estekak = [
   { bidea: '/salmentak', testua: 'salmentak' },
   { bidea: '/datubase', testua: 'datubase' },
   { bidea: '/harpidetzak', testua: 'harpidetzak' },
-  { bidea: '/erreserbak', testua: 'Erreserbak' },
+  { bidea: '/erreserbakadmin', testua: 'Erreserbak-admin' },
 ]
 
 export default function Goiburua() {
@@ -31,7 +31,7 @@ export default function Goiburua() {
         ))}
       </ul>
 
-      <Link className="btn btn-primary w-100" href="/saioa-itxi">
+      <Link className="btn btn-primary w-100" href="/">
         Saioa itxi
       </Link>
     </aside>
