@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="eu">
       <body>
-        <Goiburua />
+        <Goiburua/>
         <main>{children}</main>
         <BootstrapJS />
          <Footer />

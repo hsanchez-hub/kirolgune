@@ -30,10 +30,6 @@ export default function Goiburua() {
           </li>
         ))}
       </ul>
-
-      <Link className="btn btn-primary w-100" href="/">
-        Saioa itxi
-      </Link>
     </aside>
   )
 }
