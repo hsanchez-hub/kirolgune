@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 const estekak = [
   { bidea: '/', testua: 'Hasiera' },
@@ -14,11 +15,12 @@ const estekak = [
 
 export default function Goiburua() {
   const unekoa = usePathname()
+  const [logeatuta, setlogeatuta] = useState(false);
 
   return (
     <header className="goiburua sticky-top">
       <nav className="navbar navbar-expand-lg py-2">
-        <div className="container">
+        <div className="container-fluid">
           <Link className="navbar-brand d-flex align-items-center gap-2" href="/">
             <Image src="/kirolgune-logoa.png" alt="" width={28} height={38} priority />
             KirolGune
@@ -50,14 +52,19 @@ export default function Goiburua() {
               ))}
             </ul>
 
-            <div className="d-flex gap-2">
-              <Link className="btn btn-outline-primary" href="/saioa-hasi">
+            {logeatuta == false ? (<div className="d-flex gap-2">
+              <Link className="btn btn-outline-primary" href="/saioa-hasi" onClick={() => setlogeatuta(true)}>
                 Saioa hasi
               </Link>
               <Link className="btn btn-primary" href="/erregistratu">
                 Erregistratu
               </Link>
-            </div>
+            </div>) : ( <div className="d-flex gap-2">
+             <Link className="btn btn-outline-primary" href="/" onClick={() => setlogeatuta(false)}>
+                Saioa itxi
+              </Link>   <Link className="btn btn-primary" href="/admin">
+                Admin 
+              </Link> </div>)}
           </div>
         </div>
       </nav>

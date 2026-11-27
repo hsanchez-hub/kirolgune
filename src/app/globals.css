@@ -89,3 +89,35 @@ body {
   place-items: center;
   font-size: 1.4rem;
 }
+/* Alboa (sidebar) */
+.alboa {
+  background: var(--kg-berde-iluna);
+  color: #fff;
+  height: calc(90vh - 60px); 
+  z-index: 1000; 
+}
+
+.alboa .navbar-brand {
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.alboa .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.alboa .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.alboa .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 3px 0 0  var(--kg-berdea);
+}
+.alboa .nav-link.active:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
